@@ -177,8 +177,7 @@ p { margin: 0 0 1em; }
   position: sticky;
   top: 0;
   z-index: 80;
-  background: rgba(18, 18, 20, .94);
-  backdrop-filter: blur(6px);
+  background: rgba(18, 18, 20, .97);
   border-bottom: 1px solid var(--steel);
   transition: box-shadow .2s;
 }
