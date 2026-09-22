@@ -1096,14 +1096,14 @@ p { margin: 0 0 1em; }
   .nav__item--menuonly { display: block; }
 
   .nav__list a {
-    font-family: var(--f-body);
-    font-size: 17px;
-    font-weight: 600;
-    letter-spacing: .04em;
+    font-family: var(--f-display);
+    font-size: clamp(24px, 6.5vw, 30px);
+    font-weight: 400;
+    letter-spacing: .05em;
     text-transform: uppercase;
     color: var(--txt);
     border-bottom: 1px solid var(--steel);
-    padding: 15px 2px;
+    padding: 17px 2px;
     display: block;
     transition: color .15s, padding-left .15s;
   }
