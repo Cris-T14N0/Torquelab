@@ -1079,6 +1079,7 @@ p { margin: 0 0 1em; }
 
   .nav-toggle { display: flex; }
   .nav {
+    display: none;
     position: fixed;
     inset: 0;
     top: 0;
@@ -1086,12 +1087,10 @@ p { margin: 0 0 1em; }
     justify-content: center;
     gap: 30px;
     background: rgba(12, 12, 14, .98);
-    transform: translateX(100%);
-    transition: transform .3s ease;
     padding: 90px 8vw 40px;
     overflow-y: auto;
   }
-  .nav.is-open { transform: translateX(0); }
+  .nav.is-open { display: flex; }
   .nav__list { flex-direction: column; gap: 6px; width: 100%; }
   .nav__item--menuonly { display: block; }
 
