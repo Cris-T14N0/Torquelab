@@ -80,27 +80,27 @@
       var servico = form.elements.servico.value || 'A definir';
       var mensagem = form.elements.mensagem.value.trim();
 
-      if (!nome || !telefone) {
-        status.textContent = 'Preenche pelo menos o nome e o telefone para conseguirmos responder.';
+if (!nome || !telefone) {
+        status.textContent = 'Preencha, por favor, o nome e o telefone para podermos responder.';
         status.classList.add('is-ok');
         return;
       }
 
       var linhas = [
-        'Olá! Venho do site da TorqueLab e quero marcar um serviço.',
+        'Boa tarde. Venho do site da TorqueLab e pretendo agendar um serviço.',
         '---',
         'Nome: ' + nome,
         'Telefone: ' + telefone,
         'Viatura: ' + (viatura || '-'),
         'Serviço: ' + servico,
-        'O que se passa: ' + (mensagem || '-'),
+        'Descrição: ' + (mensagem || '-'),
         '---',
-        'Enviado pelo site torquelab.pt'
+        'Pedido enviado através do site torquelab.pt'
       ];
       var url = 'https://wa.me/' + SITE.whatsapp + '?text=' + encodeURIComponent(linhas.join('\n'));
       window.open(url, '_blank', 'noopener');
 
-      status.textContent = 'A abrir o WhatsApp para concluir o pedido… se não abrir, liga-nos ' + SITE.whatsapp.replace(/^(351)/, '+351 ');
+      status.textContent = 'A abrir o WhatsApp para concluir o pedido… se não abrir, contacte-nos pelo telefone ' + SITE.whatsapp.replace(/^(351)/, '+351 ');
       status.classList.add('is-ok');
     });
 
