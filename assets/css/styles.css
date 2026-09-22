@@ -1084,13 +1084,14 @@ p { margin: 0 0 1em; }
     inset: 0;
     top: 0;
     flex-direction: column;
-    justify-content: center;
     gap: 30px;
     background: rgba(12, 12, 14, .98);
-    padding: 90px 8vw 40px;
+    padding: calc(var(--header-h) + 12px) 8vw 40px;
     overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
   }
   .nav.is-open { display: flex; }
+  .nav__list { margin: auto 0; }
   .nav__list { flex-direction: column; gap: 6px; width: 100%; }
   .nav__item--menuonly { display: block; }
 
