@@ -22,6 +22,9 @@
   atualizarHeader();
   window.addEventListener('scroll', atualizarHeader, { passive: true });
 
+  var fechar = document.getElementById('nav-close');
+  if (fechar) fechar.addEventListener('click', fecharMenu);
+
   var toggle = document.getElementById('nav-toggle');
   var nav = document.getElementById('site-nav');
   function fecharMenu() {

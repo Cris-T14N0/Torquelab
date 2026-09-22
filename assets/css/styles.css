@@ -37,6 +37,7 @@ html {
   scroll-behavior: smooth;
   scroll-padding-top: 110px;
   -webkit-text-size-adjust: 100%;
+  overflow-x: clip;
 }
 
 body {
@@ -47,6 +48,7 @@ body {
   color: var(--txt);
   background: var(--ink);
   -webkit-font-smoothing: antialiased;
+  overflow-x: clip;
 }
 
 img { max-width: 100%; display: block; height: auto; }
@@ -206,6 +208,7 @@ p { margin: 0 0 1em; }
 .brand__text span { color: var(--orange); }
 
 .nav { display: flex; align-items: center; gap: 26px; }
+.nav-close { display: none; }
 .nav__list { display: flex; gap: 26px; }
 .nav__item--menuonly { display: none; }
 .nav__list a {
@@ -1083,7 +1086,7 @@ p { margin: 0 0 1em; }
     inset: 0;
     flex-direction: column;
     background: rgba(12, 12, 14, .99);
-    padding: calc(var(--header-h) + 10px) 6vw calc(28px + env(safe-area-inset-bottom));
+    padding: 18px 6vw calc(28px + env(safe-area-inset-bottom));
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
     z-index: 20;
@@ -1091,6 +1094,26 @@ p { margin: 0 0 1em; }
   .nav.is-open { display: flex; }
   .nav__list { flex-direction: column; width: 100%; margin: 0; gap: 0; }
   .nav__item--menuonly { display: block; }
+  .nav-close {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    align-self: flex-end;
+    margin-bottom: 14px;
+    font-family: var(--f-mono);
+    font-size: 12.5px;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--txt);
+    background: none;
+    border: 1px solid var(--steel-2);
+    border-radius: 2px;
+    padding: 10px 16px;
+    cursor: pointer;
+    transition: color .15s, border-color .15s;
+  }
+  .nav-close:hover { color: var(--orange); border-color: var(--orange); }
+  body.nav-open .nav-toggle { visibility: hidden; }
 
   .nav__list a {
     font-family: var(--f-display);
