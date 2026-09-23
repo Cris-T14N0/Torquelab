@@ -562,20 +562,7 @@ p { margin: 0 0 1em; }
   color: var(--muted);
   max-width: 74ch;
 }
-.serv-row__cta {
-  flex-shrink: 0;
-  font-family: var(--f-mono);
-  font-size: 12.5px;
-  letter-spacing: .1em;
-  text-transform: uppercase;
-  color: var(--orange);
-  text-decoration: none;
-  white-space: nowrap;
-  border: 1px solid transparent;
-  padding: 8px 12px;
-  transition: border-color .15s, background-color .15s;
-}
-.serv-row__cta:hover { border-color: var(--orange); background: rgba(226, 88, 34, .1); }
+.serv-cat__foot { padding-top: 16px; }
 
 /* ------------------------------ método ---------------------------- */
 
@@ -845,7 +832,7 @@ p { margin: 0 0 1em; }
   grid-template-columns: 1fr 1fr;
   gap: 16px;
 }
-.field { display: flex; flex-direction: column; gap: 7px; }
+.field { display: flex; flex-direction: column; gap: 7px; min-width: 0; }
 .field--full { grid-column: 1 / -1; }
 .field label {
   font-family: var(--f-mono);
@@ -865,6 +852,10 @@ p { margin: 0 0 1em; }
   border: 1px solid var(--steel-2);
   border-radius: 2px;
   padding: 13px 14px;
+  width: 100%;
+  min-width: 0;
+  -webkit-appearance: none;
+  appearance: none;
   transition: border-color .15s, background-color .15s;
 }
 .field input::placeholder,
@@ -876,7 +867,7 @@ p { margin: 0 0 1em; }
   border-color: var(--orange);
   background: #0d0d0f;
 }
-.field select { appearance: none; background-image: linear-gradient(45deg, transparent 50%, var(--orange) 50%), linear-gradient(135deg, var(--orange) 50%, transparent 50%); background-position: calc(100% - 20px) calc(50% - 3px), calc(100% - 14px) calc(50% - 3px); background-size: 6px 6px, 6px 6px; background-repeat: no-repeat; }
+.field select { appearance: none; -webkit-appearance: none; padding-right: 40px; background-image: linear-gradient(45deg, transparent 50%, var(--orange) 50%), linear-gradient(135deg, var(--orange) 50%, transparent 50%); background-position: calc(100% - 20px) calc(50% - 3px), calc(100% - 14px) calc(50% - 3px); background-size: 6px 6px, 6px 6px; background-repeat: no-repeat; }
 .field select optgroup { background: var(--ink); color: var(--txt); font-style: normal; }
 .field textarea { resize: vertical; min-height: 110px; }
 
@@ -1140,7 +1131,7 @@ p { margin: 0 0 1em; }
   .serv-cat__num { font-size: 44px; }
   .serv-cat__count { grid-column: 2; margin-top: -8px; }
   .serv-row { flex-direction: column; align-items: flex-start; gap: 12px; padding: 16px 4px; }
-  .serv-row__cta { padding: 9px 14px; border-color: var(--steel-2); }
+  .serv-cat__foot .btn { width: 100%; }
 
   .step { grid-template-columns: 64px minmax(0, 1fr); gap: 14px; padding-left: 18px; }
   .step__num { font-size: 42px; }
@@ -1151,6 +1142,8 @@ p { margin: 0 0 1em; }
   .g1 { grid-column: span 2; grid-row: span 2; }
 
   .worksheet__grid { grid-template-columns: 1fr; }
+  .worksheet__foot { align-items: stretch; }
+  .worksheet__foot .btn { width: 100%; text-align: center; }
   .site-footer__grid { grid-template-columns: 1fr; gap: 32px; }
   .site-footer__bottom { flex-direction: column; gap: 8px; }
 
@@ -1165,6 +1158,8 @@ p { margin: 0 0 1em; }
   .hero__actions { flex-direction: column; align-items: stretch; }
   .hero__actions .btn { width: 100%; }
   .stats { grid-template-columns: 1fr; }
+  .worksheet { padding: 22px 16px; }
+  .worksheet__title { font-size: 26px; }
   .gallery { grid-template-columns: 1fr; grid-auto-rows: 210px; }
   .g1 { grid-column: span 1; grid-row: span 2; }
 }
