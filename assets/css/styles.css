@@ -20,8 +20,8 @@
   --txt-dark: #1c1c1f;
   --muted-dark: #5f5b54;
 
-  --orange: #e25822;
-  --orange-2: #f06a2f;
+  --orange: #2596be;
+  --orange-2: #2596be;
 
   --f-display: 'Bebas Neue', 'Arial Narrow', sans-serif;
   --f-body: 'Archivo', 'Helvetica Neue', sans-serif;
@@ -266,7 +266,7 @@ p { margin: 0 0 1em; }
   overflow: hidden;
   background-color: var(--ink);
   background-image:
-    radial-gradient(circle at 78% 18%, rgba(226, 88, 34, .28), transparent 42%),
+    radial-gradient(circle at 78% 18%, rgba(37, 150, 190, .28), transparent 42%),
     linear-gradient(rgba(18, 18, 20, .93), rgba(18, 18, 20, .84)),
     url("https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&w=1920&q=80");
   background-size: cover;
@@ -491,7 +491,7 @@ p { margin: 0 0 1em; }
 .services-index a:hover {
   color: var(--txt);
   border-color: var(--orange);
-  background: rgba(226, 88, 34, .08);
+  background: rgba(37, 150, 190, .08);
 }
 
 .serv-cat {
