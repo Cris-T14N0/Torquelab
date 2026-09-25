@@ -2,7 +2,7 @@
   'use strict';
 
   var SITE = {
-    whatsapp: '351263000000',
+    whatsapp: '914 009 752',
     instagram: 'https://www.instagram.com/torquelab2025/'
   };
 
